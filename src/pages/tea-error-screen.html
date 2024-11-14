@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex" />
+    <link
+      id="favicon"
+      rel="shortcut icon"
+      href="https://cdn.text-em-all.com/assets/app-icons/text-em-all-favicon.ico"
+      type="image/ico"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <script>
+      window.onload = function () {
+        // Update copyright year dynamically
+        document.getElementById(
+          'copyright-year'
+        ).innerHTML = new Date().getFullYear();
+      };
+    </script>
+
+    <title>Text-Em-All - Error Screen</title>
+
+    <style type="text/css">
+      @font-face {
+        font-family: 'Circular';
+        src: url('https://cdn2.hubspot.net/hubfs/2513604/assets/fonts/circular/Circular-Book.woff')
+            format('woff'),
+          url('https://cdn2.hubspot.net/hubfs/2513604/assets/fonts/circular/Circular-Book.ttf')
+            format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Circular';
+        src: url('https://cdn2.hubspot.net/hubfs/2513604/assets/fonts/circular/Circular-Medium.woff')
+            format('woff'),
+          url('https://cdn2.hubspot.net/hubfs/2513604/assets/fonts/circular/Circular-Medium.ttf')
+            format('truetype');
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      html,
+      body {
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #fff;
+        color: #354c72;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        padding: 64px;
+      }
+
+      h1 {
+        font-family: 'Circular', sans-serif;
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        white-space: wrap;
+        font-size: 30px;
+      }
+
+      a {
+        color: #0096fa;
+      }
+
+      .content-container {
+        display: flex;
+        gap: 32px;
+        justify-content: flex-end;
+        align-items: center;
+        height: 78vh;
+        width: 100%;
+        flex-direction: row-reverse;
+      }
+
+      .content-container > * {
+        max-width: 50%;
+      }
+
+      .image-container {
+        position: absolute;
+        right: 0;
+        max-width: 50%;
+      }
+
+      .text-container {
+        text-align: left;
+      }
+
+      .text-container > * {
+        /* Help with readability by setting between 60-75ch */
+        /* https://piccalil.li/blog/line-length/ */
+        max-width: 54ch;
+      }
+
+      .doodle-image {
+        max-width: 100%;
+      }
+
+      .footer {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 11px;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .logo {
+        height: 32px;
+        margin: 12px auto;
+      }
+
+      .content {
+        max-width: 368px;
+        margin: 1em auto;
+      }
+      #last-update {
+        margin-top: 0;
+        font-size: 14px;
+      }
+      /* 
+     * Breakpoints
+     * 
+     * Follow the MUI built-in defaults
+     *  xs: 0
+     *  sm: 600
+     *  md: 900
+     *  lg: 1200
+     *  xl: 1536
+     **/
+
+      /* xs — <600 */
+      @media screen and (max-width: 599px) {
+        main {
+          padding: 16px;
+        }
+
+        .content-container {
+          flex-wrap: wrap;
+        }
+
+        .content-container > * {
+          max-width: 90%;
+        }
+      }
+
+      /* sm — 600 */
+      @media screen and (min-width: 600px) {
+        main {
+          padding: 32px;
+        }
+
+        .content-container {
+          flex-wrap: wrap;
+        }
+
+        .content-container > * {
+          max-width: 75%;
+        }
+      }
+
+      @media screen and (max-width: 899px) {
+        main {
+          padding: 32px;
+        }
+
+        .content-container {
+          flex-wrap: wrap;
+        }
+
+        .image-container {
+          align-self: flex-end;
+          position: static;
+        }
+      }
+
+      /* md — 900 */
+      @media screen and (min-width: 900px) {
+        main {
+          padding: 32px;
+        }
+
+        .content-container {
+          flex-wrap: nowrap;
+        }
+
+        .content-container > * {
+          max-width: 50%;
+        }
+      }
+
+      /* lg — 1200px */
+      @media screen and (min-width: 1200px) {
+        main {
+          padding: 32px;
+        }
+
+        .content-container {
+          max-width: 1000px;
+        }
+
+        .content-container > * {
+          max-width: 45%;
+        }
+
+        .text-container > * {
+          /* Help with readability by setting between 60-75ch */
+          /* https://piccalil.li/blog/line-length/ */
+          max-width: 54ch;
+        }
+
+        .text-container > h1 {
+          max-width: 35ch;
+        }
+      }
+
+      /* xl — 1536px */
+      @media screen and (min-width: 1536px) {
+        .content-container {
+          max-width: 1200px;
+        }
+
+        .content-container > * {
+          max-width: 40%;
+        }
+
+        .text-container > * {
+          /* Help with readability by setting between 60-75ch */
+          /* https://piccalil.li/blog/line-length/ */
+          max-width: 54ch;
+        }
+
+        .text-container > h1 {
+          max-width: 35ch;
+        }
+      }
+    </style>
+    <script src="./Maintenance_files/jquery-1.11.3.min.js"></script>
+    <script src="./Maintenance_files/moment.min.js"></script>
+    <script type="text/javascript">
+      $.get('https://bifrost.call-em-all.com/system_status', function (data) {
+        $('#status-message').html(
+          data.details ||
+            'We’re currently experiencing a service interruption, but our team is working hard to resolve it as soon as possible. Thank you for your patience and understanding!'
+        );
+
+        if (data.datetime)
+          $('#status-date').html(
+            moment(data.datetime).format('MMMM Do, YYYY h:mm a')
+          );
+        else $('#last-update').hide();
+      });
+    </script>
+  </head>
+
+  <body x-ms-format-detection="none">
+    <main>
+      <section class="content-container">
+        <div class="image-container">
+          <img
+            class="doodle-image"
+            src="https://cdn.text-em-all.com/assets/doodle-error-screen.png"
+            alt="Text-Em-All mascot Doodle the pigeon with a orange plug in cord."
+          />
+        </div>
+
+        <div class="text-container">
+          <h1>Text-Em-All is currently down.</h1>
+
+          <p id="status-message">
+            We’re currently experiencing a service interruption, but our team is
+            working hard to resolve it as soon as possible. Thank you for your
+            patience and understanding!
+          </p>
+          <p>
+            For live updates, visit
+            <a id="status-page-link" href="https://status.text-em-all.com/"
+              >our status page</a
+            >.
+          </p>
+          <img
+            class="logo"
+            src="https://cdn.text-em-all.com/assets/text-em-all-logo.svg"
+            alt="Text-Em-All Logo"
+          />
+          <p id="last-update">Last update: <span id="status-date"></span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © <span id="copyright-year"></span> Call-Em-All, Inc. All rights reserved.
+    </footer>
+  </body>
+</html>
