@@ -253,8 +253,8 @@
         }
       }
     </style>
-    <script src="./Maintenance_files/jquery-1.11.3.min.js"></script>
-    <script src="./Maintenance_files/moment.min.js"></script>
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script type="text/javascript">
       $.get('https://bifrost.call-em-all.com/system_status', function (data) {
         $('#status-message').html(
@@ -277,7 +277,7 @@
         <div class="image-container">
           <img
             class="doodle-image"
-            src="https://cea-error-pages.s3.us-east-1.amazonaws.com/images/doodle-error-screen.png"
+            src="https://s3.amazonaws.com/cea-error-pages/images/doodle-error-screen.png"
             alt="Text-Em-All mascot Doodle the pigeon with a orange plug in cord."
           />
         </div>
@@ -298,7 +298,7 @@
           </p>
           <img
             class="logo"
-            src="https://cea-error-pages.s3.us-east-1.amazonaws.com/images/text-em-all-logo.svg"
+            src="https://s3.amazonaws.com/cea-error-pages/images/text-em-all-logo.svg"
             alt="Text-Em-All Logo"
           />
           <p id="last-update">Last update: <span id="status-date"></span></p>
