@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Text-Em-All - Maintenance</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+
+    <style type="text/css">
+      /* Override some defaults */
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: url(https://s3.amazonaws.com/cea-error-pages/images/tea-robot.jpg)
+          no-repeat top center #f0a528;
+      }
+      #UpdateContainer {
+        font-family: arial;
+        margin: 0px auto;
+        margin-top: 510px;
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #UpdateContainer h2 {
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+        max-width: 500px;
+      }
+      h2 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script type="text/javascript">
+      $.get('https://bifrost.call-em-all.com/system_status', function (data) {
+        $('#statusMessage').html(
+          data.details ||
+            "Something isn't going quite right. But we are aware of it and working to fix it.",
+        );
+        if (data.datetime)
+          $('#statusDate').html(
+            moment(data.datetime).format('MMMM Do, YYYY h:mm a'),
+          );
+        else $('#LastUpdate').hide();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="UpdateContainer">
+      <h2 id="statusMessage">
+        Something isn't going quite right. But we are aware of it and working to
+        fix it.
+      </h2>
+      <h3 id="LastUpdate" style="text-align: center; font-size: 14px">
+        Last update: <span id="statusDate"></span>
+      </h3>
+      <p>
+        If you have any questions during this period of downtime, our support
+        team is available by emailing
+        <a href="mailto:support@text-em-all.com">support@text-em-all.com</a> or
+        by calling <a href="tel:+18772263080">+1 (877) 226-3080</a>. You can
+        also check our system status 24/7 at the
+        <a href="https://status.text-em-all.com">Text-Em-All status page</a>.
+        Thank you for your patience as we ensure we are able to provide the
+        service you've come to expect from us.
+      </p>
+    </div>
+  </body>
+</html>
