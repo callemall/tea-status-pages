@@ -7,7 +7,7 @@ This repo holds the status pages when the web app (cea-desktop) is down.
 
 Both pages are hosted on an S3 bucket: https://us-east-1.console.aws.amazon.com/s3/buckets/cea-error-pages
 
-These pages retrieve data from the status.io API to display on the page. The credential to the Text-Em-All status.io account can be found [on the engineering wiki](https://sites.google.com/call-em-all.com/engineeringoperationswiki/contact-info?authuser=0#h.p_2_vfmYqglTNj).
+These pages retrieve data from the status.io [public status API](https://status.text-em-all.com/1.0/status/536bd6f1fd254d6008000273) to display on the page. The credential to the Text-Em-All status.io account can be found [on the engineering wiki](https://sites.google.com/call-em-all.com/engineeringoperationswiki/contact-info?authuser=0#h.p_2_vfmYqglTNj).
 
 ## How to Update the Contents of the Error or Maintenance Pages
 
@@ -26,4 +26,5 @@ Please follow these instructions carefully to ensure the update is done correctl
 - [Guide to updating status.io messages (Incidents vs Maintenance)](https://docs.google.com/document/d/1wp1BLBJq0KWVw31sUlQ7hVIxYAyFJxTIOBCybZ_h1AE/edit?tab=t.0)
 - [Status.io](https://status.io/)
 - [Status.io credentials](https://sites.google.com/call-em-all.com/engineeringoperationswiki/contact-info?authuser=0#h.p_2_vfmYqglTNj)
+- [Public Status API](https://status.text-em-all.com/1.0/status/536bd6f1fd254d6008000273)
 - [Text-Em-All status page](https://status.text-em-all.com/)

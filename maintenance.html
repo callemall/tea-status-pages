@@ -252,17 +252,17 @@
  ></script>
     <script type="text/javascript">
       $(function () {
-        $.get('https://maintenance.herokuapp.com/status', function (data) {
+        $.get('https://status.text-em-all.com/1.0/status/536bd6f1fd254d6008000273', function (data) {
           console.log(data.result);
-          if (data.result.active_maintenances[0]) {
+          if (data.result.maintenance.active[0]) {
             $('#planned-end-date').html(
               moment(
-                data.result.active_maintenances[0].datetime_planned_end
+                data.result.maintenance.active[0].datetime_planned_end
               ).format('MMMM Do, YYYY h:mm a')
             );
 
             $('#status-date').html(
-              moment(data.result.active_maintenances[0].datetime_open).format('MMMM Do, YYYY h:mm a')
+              moment(data.result.maintenance.active[0].datetime_open).format('MMMM Do, YYYY h:mm a')
             );
           }
         });
