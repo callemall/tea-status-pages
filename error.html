@@ -257,15 +257,19 @@
    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script type="text/javascript">
-      $.get('https://bifrost.call-em-all.com/system_status', function (data) {
+      $.get('https://status.text-em-all.com/1.0/status/536bd6f1fd254d6008000273', function (data) {
+        var incidentData = data.result.incidents;
+        var latestIncident = incidentData[incidentData.length - 1];
+        var latestIncidentMessage = latestIncident?.messages[latestIncident.messages.length - 1]
         $('#status-message').html(
-          data.details ||
+          latestIncidentMessage?.details ||
             'We’re currently experiencing a service interruption, but our team is working hard to resolve it as soon as possible. Thank you for your patience and understanding!'
         );
 
-        if (data.datetime)
+        var statusDate = latestIncidentMessage?.datetime;
+        if (statusDate)
           $('#status-date').html(
-            moment(data.datetime).format('MMMM Do, YYYY h:mm a')
+            moment(statusDate).format('MMMM Do, YYYY h:mm a')
           );
         else $('#last-update').hide();
       });

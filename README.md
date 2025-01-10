@@ -26,5 +26,5 @@ Please follow these instructions carefully to ensure the update is done correctl
 - [Guide to updating status.io messages (Incidents vs Maintenance)](https://docs.google.com/document/d/1wp1BLBJq0KWVw31sUlQ7hVIxYAyFJxTIOBCybZ_h1AE/edit?tab=t.0)
 - [Status.io](https://status.io/)
 - [Status.io credentials](https://sites.google.com/call-em-all.com/engineeringoperationswiki/contact-info?authuser=0#h.p_2_vfmYqglTNj)
-- [Public Status API](https://status.text-em-all.com/1.0/status/536bd6f1fd254d6008000273)
+- [Status.io Public Status API](https://status.text-em-all.com/1.0/status/536bd6f1fd254d6008000273)
 - [Text-Em-All status page](https://status.text-em-all.com/)
